@@ -69,5 +69,38 @@ def search_account():
             print("===================================")
             return
 
-    print("\nAccount not found!")        
+    print("\nAccount not found!")     
+
+
+def deposit_money():
+    accounts = load_accounts()
+
+    if not accounts:
+        print("\n No accounts found!")
+        return
+
+    account_number = int(input("Enter Account Number to deposit money:"))
+    amount = float(input("Enter Amount to Deposit:"))
+
+    if amount <= 0:
+        print("\n Amount should be greater than zero")
+        return
+
+    for account in accounts:
+        if account["Account_Number"] == account_number:
+            account["Balance"] += amount
+            transaction = {
+                "Type" : "Deposit",
+                "Amount" : amount
+            }   
+
+            account["Transactions"].append(transaction)
+
+            save_accounts(accounts)
+
+            print("\n Amount Deposited Successfully!")
+            print("Deposited Amount:" , amount)
+            print("New Balance:", account["Balance"])    
+            return
+    print("\n Account not found!")                    
 

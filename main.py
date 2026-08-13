@@ -3,7 +3,8 @@ from src.account import Account
 from src.operations import (
     create_account,
     view_accounts,
-    search_account
+    search_account,
+    deposit_money
 )
 
 
