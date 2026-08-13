@@ -1,0 +1,11 @@
+[
+    {
+        "Account_Number": 1001,
+        "Name": "Astha Singh",
+        "Age": 20,
+        "Phone": "367623399208",
+        "Account_Type": "s",
+        "Balance": 0,
+        "Transactions": []
+    }
+]
