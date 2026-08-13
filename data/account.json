@@ -5,8 +5,17 @@
         "Age": 20,
         "Phone": "367623399208",
         "Account_Type": "s",
-        "Balance": 0,
-        "Transactions": []
+        "Balance": 260000.0,
+        "Transactions": [
+            {
+                "Type": "Deposit",
+                "Amount": 230000.0
+            },
+            {
+                "Type": "Deposit",
+                "Amount": 30000.0
+            }
+        ]
     },
     {
         "Account_Number": 1002,
