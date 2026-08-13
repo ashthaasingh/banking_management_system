@@ -25,3 +25,25 @@ def create_account():
 
     print("\nAccount Created Successfully!")
     print("Your Account Number is:", account_number)
+
+
+def view_accounts():
+    accounts = load_accounts()
+
+    if not accounts:
+        print("\n No accounts found!")
+        return
+
+    print("\n =============== All Accounnts ================") 
+
+    for account in accounts:
+        print("===================================")
+        print("Account Number:", account["Account_Number"])
+        print("Name:", account["Name"])
+        print("Age:", account["Age"])
+        print("Phone Number:", account["Phone"])
+        print("Account Type:", account["Account_Type"])
+        print("Balance:", account["Balance"])
+
+        print("===================================")    
+

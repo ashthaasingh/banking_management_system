@@ -1,7 +1,8 @@
 from src.menu import menu
 from src.account import Account
 from src.operations import (
-    create_account
+    create_account,
+    view_accounts
 )
 
 

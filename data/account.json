@@ -7,5 +7,32 @@
         "Account_Type": "s",
         "Balance": 0,
         "Transactions": []
+    },
+    {
+        "Account_Number": 1002,
+        "Name": "Abhinav Mishra",
+        "Age": 34,
+        "Phone": "3847955685",
+        "Account_Type": "c",
+        "Balance": 0,
+        "Transactions": []
+    },
+    {
+        "Account_Number": 1003,
+        "Name": "Abhi singh",
+        "Age": 56,
+        "Phone": "964734682",
+        "Account_Type": "s",
+        "Balance": 0,
+        "Transactions": []
+    },
+    {
+        "Account_Number": 1004,
+        "Name": "Sahil singh",
+        "Age": 2,
+        "Phone": "3243242353",
+        "Account_Type": "s",
+        "Balance": 0,
+        "Transactions": []
     }
 ]
