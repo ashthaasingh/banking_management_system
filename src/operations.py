@@ -47,3 +47,27 @@ def view_accounts():
 
         print("===================================")    
 
+
+def search_account():
+    accounts = load_accounts()
+
+    if not accounts:
+        print("\nNo accounts found!")
+        return
+
+    account_number = int(input("Enter Account Number to search: "))
+
+    for account in accounts:
+        if account["Account_Number"] == account_number:
+            print("\n========== Account Found ==========")
+            print("Account Number:", account["Account_Number"])
+            print("Name:", account["Name"])
+            print("Age:", account["Age"])
+            print("Phone Number:", account["Phone"])
+            print("Account Type:", account["Account_Type"])
+            print("Balance:", account["Balance"])
+            print("===================================")
+            return
+
+    print("\nAccount not found!")        
+
