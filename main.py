@@ -7,7 +7,8 @@ from src.operations import (
     deposit_money,
     withdraw_money,
     transfer_money,
-    transaction_history
+    transaction_history,
+    delete_account
 )
 
 

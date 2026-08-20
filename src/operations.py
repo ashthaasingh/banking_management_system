@@ -224,3 +224,34 @@ def transaction_history():
             print("-------------------------------------")
             return
     print("\n Account not found!")        
+
+def delete_account():
+    accounts = load_accounts()
+
+    if not accounts:
+        print("\n No accounts found!")
+        return
+
+    account_number = int(input("Enter Account Number to delete:"))
+
+    for account in accounts:
+        if account["Account_Number"] == account_number:
+
+            print ("\n============ Account Found ============")
+            print("Account Number:", account["Account_Number"])
+            print("Name:", account["Name"])
+            print("Account Type:", account["Account_Type"])
+            print("Balance:", account["Balance"])
+
+            confirmation = input("\n Are you sure you want to delete this account? (yes/no):") 
+
+            if confirmation.lower() == "yes":
+                accounts.remove(account)
+                save_accounts(accounts)
+                print("\n Account deleted successfully!")
+                return
+            else:
+                print("\n Account deletion cancelled!")
+                return
+    print("\n Account not found!")
+                 

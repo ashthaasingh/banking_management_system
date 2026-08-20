@@ -36,15 +36,6 @@
         "Transactions": []
     },
     {
-        "Account_Number": 1004,
-        "Name": "Sahil singh",
-        "Age": 2,
-        "Phone": "3243242353",
-        "Account_Type": "s",
-        "Balance": 0,
-        "Transactions": []
-    },
-    {
         "Account_Number": 1005,
         "Name": "apporva",
         "Age": 23,
