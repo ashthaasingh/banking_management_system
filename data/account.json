@@ -50,7 +50,7 @@
         "Age": 23,
         "Phone": "2833422425",
         "Account_Type": "s",
-        "Balance": 2345677.0,
+        "Balance": 2368677.0,
         "Transactions": [
             {
                 "Type": "Deposit",
@@ -64,7 +64,7 @@
         "Age": 23,
         "Phone": "3897498653",
         "Account_Type": "s",
-        "Balance": 39970000.0,
+        "Balance": 39947000.0,
         "Transactions": [
             {
                 "Type": "Deposit",
@@ -73,6 +73,11 @@
             {
                 "Type": "Withdraw",
                 "Amount": 30000.0
+            },
+            {
+                "Type": "Transfer",
+                "Amount": 23000.0,
+                "To_Account": 1005
             }
         ]
     }

@@ -5,7 +5,8 @@ from src.operations import (
     view_accounts,
     search_account,
     deposit_money,
-    withdraw_money
+    withdraw_money,
+    transfer_money
 )
 
 

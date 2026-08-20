@@ -144,3 +144,57 @@ def withdraw_money():
             return
 
     print("\nAccount not found!")
+
+def transfer_money():
+    accounts = load_accounts()
+
+    if not accounts:
+        print("\nNo accounts found!")
+        return
+
+    from_account_number = int(input("Enter Your Account Number: "))
+    to_account_number = int(input("Enter Recipient's Account Number: "))
+    amount = float(input("Enter Amount to Transfer: "))
+
+    if amount <= 0:
+        print("\nAmount must be greater than 0!")
+        return
+
+    from_account = None
+    to_account = None
+
+    for account in accounts:
+        if account["Account_Number"] == from_account_number:
+            from_account = account
+        elif account["Account_Number"] == to_account_number:
+            to_account = account
+
+    if not from_account:
+        print("\nYour account not found!")
+        return
+
+    if not to_account:
+        print("\nRecipient's account not found!")
+        return
+
+    if amount > from_account["Balance"]:
+        print("\nInsufficient Balance!")
+        print("Available Balance:", from_account["Balance"])
+        return
+
+    from_account["Balance"] -= amount
+    to_account["Balance"] += amount
+
+    transaction = {
+        "Type": "Transfer",
+        "Amount": amount,
+        "To_Account": to_account_number
+    }
+
+    from_account["Transactions"].append(transaction)
+
+    save_accounts(accounts)
+
+    print("\nTransfer Successful!")
+    print("Transferred Amount:", amount)
+    print("Remaining Balance:", from_account["Balance"])
