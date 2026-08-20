@@ -198,3 +198,29 @@ def transfer_money():
     print("\nTransfer Successful!")
     print("Transferred Amount:", amount)
     print("Remaining Balance:", from_account["Balance"])
+
+def transaction_history():
+    accounts = load_accounts()
+
+    if not accounts:
+        print("\n Accounts not found!")
+        return
+
+    account_number = int(input("Enter Account Number to view transaction history:"))
+
+    for account in accounts:
+        if account["Account_Number"] == account_number:
+
+            print("\n========== Transaction History ==========")
+
+            if not account["Transactions"]:
+                print("No transactions found!")
+                return
+
+            for transaction in account["Transactions"]:
+                print("-------------------------------------")
+                print("Transaction Type:", transaction["Type"])
+                print("Amount:", transaction["Amount"])
+            print("-------------------------------------")
+            return
+    print("\n Account not found!")        

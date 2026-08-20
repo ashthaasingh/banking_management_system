@@ -32,7 +32,7 @@
         "Age": 56,
         "Phone": "964734682",
         "Account_Type": "s",
-        "Balance": 0,
+        "Balance": 20000.0,
         "Transactions": []
     },
     {
@@ -64,7 +64,7 @@
         "Age": 23,
         "Phone": "3897498653",
         "Account_Type": "s",
-        "Balance": 39947000.0,
+        "Balance": 39927000.0,
         "Transactions": [
             {
                 "Type": "Deposit",
@@ -78,6 +78,11 @@
                 "Type": "Transfer",
                 "Amount": 23000.0,
                 "To_Account": 1005
+            },
+            {
+                "Type": "Transfer",
+                "Amount": 20000.0,
+                "To_Account": 1003
             }
         ]
     }
