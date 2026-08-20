@@ -104,3 +104,43 @@ def deposit_money():
             return
     print("\n Account not found!")                    
 
+
+def withdraw_money():
+    accounts = load_accounts()
+
+    if not accounts:
+        print("\nNo accounts found!")
+        return
+
+    account_number = int(input("Enter Account Number: "))
+    amount = float(input("Enter Amount to Withdraw: "))
+
+    if amount <= 0:
+        print("\nAmount must be greater than 0!")
+        return
+
+    for account in accounts:
+        if account["Account_Number"] == account_number:
+
+            if amount > account["Balance"]:
+                print("\nInsufficient Balance!")
+                print("Available Balance:", account["Balance"])
+                return
+
+            account["Balance"] -= amount
+
+            transaction = {
+                "Type": "Withdraw",
+                "Amount": amount
+            }
+
+            account["Transactions"].append(transaction)
+
+            save_accounts(accounts)
+
+            print("\nWithdrawal Successful!")
+            print("Withdrawn Amount:", amount)
+            print("Remaining Balance:", account["Balance"])
+            return
+
+    print("\nAccount not found!")

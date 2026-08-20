@@ -43,5 +43,37 @@
         "Account_Type": "s",
         "Balance": 0,
         "Transactions": []
+    },
+    {
+        "Account_Number": 1005,
+        "Name": "apporva",
+        "Age": 23,
+        "Phone": "2833422425",
+        "Account_Type": "s",
+        "Balance": 2345677.0,
+        "Transactions": [
+            {
+                "Type": "Deposit",
+                "Amount": 2345677.0
+            }
+        ]
+    },
+    {
+        "Account_Number": 1006,
+        "Name": "shubh singh",
+        "Age": 23,
+        "Phone": "3897498653",
+        "Account_Type": "s",
+        "Balance": 39970000.0,
+        "Transactions": [
+            {
+                "Type": "Deposit",
+                "Amount": 40000000.0
+            },
+            {
+                "Type": "Withdraw",
+                "Amount": 30000.0
+            }
+        ]
     }
 ]

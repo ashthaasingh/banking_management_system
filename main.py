@@ -4,7 +4,8 @@ from src.operations import (
     create_account,
     view_accounts,
     search_account,
-    deposit_money
+    deposit_money,
+    withdraw_money
 )
 
 
@@ -31,6 +32,7 @@ while(True):
         case 8:
             delete_account()
         case 9:
-            print("Thank You! For using Banking Management System.")  
+            print("Thank You! For using Banking Management System.")
+            break  
         case _:  
             print("Invalid Choice! Please try again")                        
